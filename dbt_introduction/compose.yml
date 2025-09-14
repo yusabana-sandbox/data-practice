@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16        # 最新安定版(PostgreSQL16系)。常に最新を使いたい場合は postgres:latest も可
+    container_name: postgres
+    restart: always # unless-stopped
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data # データ永続化
+
+volumes:
+  db-data:
