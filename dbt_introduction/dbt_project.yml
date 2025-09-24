@@ -19,3 +19,8 @@ models:
     materialized: view
     materialized_dwh:
       +materialized: table
+
+vars:
+  hoge_type: 'ziro'
+  # dbt_training:
+  #   hoge_type: 'taro'
