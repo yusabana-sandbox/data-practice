@@ -5,6 +5,7 @@ version: '1.0.0'
 profile: 'dbt_training_dw'
 
 model-paths: ["models"]
+docs-paths: ["models"]
 analysis-paths: ["analysis"]
 test-paths: ["tests"]
 seed-paths: ["seeds"]

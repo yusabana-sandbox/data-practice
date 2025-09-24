@@ -33,3 +33,11 @@ dbt-compile:
 .PHONY: dbt-build
 dbt-build:
 	uv run dbt build --profiles-dir . --project-dir $(PROJECT_DIR)
+
+.PHONY: dbt-docs-generate
+dbt-docs-generate:
+	uv run dbt docs generate --profiles-dir . --project-dir $(PROJECT_DIR)
+
+.PHONY: dbt-docs-serve
+dbt-docs-serve:
+	uv run dbt docs serve --profiles-dir . --project-dir $(PROJECT_DIR)

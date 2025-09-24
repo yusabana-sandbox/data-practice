@@ -2,8 +2,10 @@ version: 2
 
 models:
   - name: employee_names  # 生成するモデルの名前
+    description: '{{ doc("employee_names") }}'  # ドキュメントの参照
     columns:
       - name: employee_id
+        description: "Employee ID"
         tests:
           - unique
           - not_null
