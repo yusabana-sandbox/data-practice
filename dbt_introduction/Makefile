@@ -41,3 +41,7 @@ dbt-docs-generate:
 .PHONY: dbt-docs-serve
 dbt-docs-serve:
 	uv run dbt docs serve --profiles-dir . --project-dir $(PROJECT_DIR)
+
+.PHONY: dbt-source-freshness
+dbt-source-freshness:
+	uv run dbt source freshness --profiles-dir . --project-dir $(PROJECT_DIR)
