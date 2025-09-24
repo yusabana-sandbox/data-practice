@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: employee_names  # 生成するモデルの名前
+    columns:
+      - name: employee_id
+        tests:
+          - unique
+          - not_null
+          - my_not_null  # カスタムテストの呼び出し
+          # - accepted_values:
+          #   values: ['hoge', 'fuga', 'piyo']
+          # - relationships:
+          #   to: ref('other_model_name')
+          #   field: id
