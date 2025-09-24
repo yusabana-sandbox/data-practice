@@ -1,2 +1,3 @@
 select *
-from {{ source('staging', 'employees') }}
+-- from {{ source('staging', 'employees') }}
+from {{ ref('jobs_jp') }}
