@@ -45,3 +45,7 @@ dbt-docs-serve:
 .PHONY: dbt-source-freshness
 dbt-source-freshness:
 	uv run dbt source freshness --profiles-dir . --project-dir $(PROJECT_DIR)
+
+.PHONY: dbt-snapshot
+dbt-snapshot:
+	uv run dbt snapshot --profiles-dir . --project-dir $(PROJECT_DIR)
